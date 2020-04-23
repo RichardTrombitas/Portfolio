@@ -1,10 +1,46 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
 body {
   background: radial-gradient(rgb(50, 0, 0), black) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  padding: 0;
-  margin: 0;
-  overflow: hidden;
+}
+
+.navbar {
+  position: fixed;
+  top: 5%;
+  right: 5%;
+  width: 100%;
+  z-index: 2;
+  text-align: right;
+}
+
+.navbar .nav-link {
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  margin-right: 20px;
+  display: inline;
+}
+
+.home-section {
+  height: 120vh;
+}
+
+.about-section {
+  height: 120vh;
+  background-color: rgba(0, 102, 255, 0.397);
+}
+
+.projects-section {
+  height: 120vh;
+  background-color: rgb(233, 178, 0);
+}
+
+.navbar > .active {
+  border-bottom: 1px solid white;
 }

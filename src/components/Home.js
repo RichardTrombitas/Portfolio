@@ -10,10 +10,10 @@ const useStyles = makeStyles({
   },
 });
 
-function Home(){
+const Home = () => {
   const classes = useStyles();
   return (
-    <>
+    <div className="home-section" id="home">
       <Header />
       <Particles
         canvasClassName={classes.particlesCanva}
@@ -27,9 +27,8 @@ function Home(){
               }
             },
           },
-        }}
-      />
-    </>
+        }}/>
+    </div>
   );
 };
 
