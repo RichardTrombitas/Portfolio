@@ -1,9 +1,14 @@
 import React, { Component } from 'react'
+import Project from './Project'
 
 export class Projects extends Component {
     render() {
         return (
-            <div className="projects-section" id="projects"></div>
+            <div className="projects-section" id="projects">
+                <Project/>
+                <Project/>
+                <Project/>
+            </div>
         )
     }
 }
