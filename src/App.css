@@ -12,20 +12,39 @@ body {
 }
 
 .navbar {
+  right: 40%
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar {
+    right: 7%;
+  }
+}
+
+.navbar {
   position: fixed;
-  top: 5%;
-  right: 5%;
-  width: 100%;
+  bottom: 5%;
   z-index: 2;
   text-align: right;
+  color: white;
+  font-family: 'Signika Negative', sans-serif;
+  font-size: 1.5rem;
 }
 
 .navbar .nav-link {
   cursor: pointer;
-  color: rgb(255, 255, 255);
-  margin-right: 20px;
+  margin-right: 1rem;
   display: inline;
+  transition: all 550ms;
 }
+
+.navbar > .active {
+  /*border-bottom: 2px solid red;*/
+  color: tomato;
+  transition: all 550ms;
+  font-size: 2.5rem; 
+}
+
 
 .home-section {
   height: 120vh;
@@ -41,6 +60,3 @@ body {
   background-color: rgb(233, 178, 0);
 }
 
-.navbar > .active {
-  border-bottom: 1px solid white;
-}
