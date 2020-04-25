@@ -1,14 +1,17 @@
 import React, { Component } from 'react'
-import Project from './Project'
+import ProjectCard from './ProjectCard'
+import {Grid} from '@material-ui/core'
 
 export class Projects extends Component {
     render() {
         return (
             <div className="projects-section" id="projects">
-                <Project/>
-                <Project/>
-                <Project/>
-            </div>
+                <Grid container>
+                    <ProjectCard/>
+                    <ProjectCard/>
+                    <ProjectCard/>
+                </Grid>
+            </div>   
         )
     }
 }
