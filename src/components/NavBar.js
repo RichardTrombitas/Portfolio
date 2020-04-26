@@ -9,17 +9,6 @@ export class NavBar extends Component {
     }
   }
 
-  componentDidMount() {
-    window.addEventListener('scroll', () => {
-      if (window.scrollY < 500) {
-        this.setState({activeLink : "home"});
-      } else if (window.scrollY < 1000) {
-        this.setState({activeLink : "projects"});
-      } else {
-        this.setState({activeLink : "about"});
-      }
-    });
-  }
 
   render() {
     return (
@@ -30,7 +19,7 @@ export class NavBar extends Component {
           smooth={true}
           offset={0}
           duration={600}
-          className={"nav-link" + (this.state.activeLink === "home" ? " activated" : "")}
+          className={"nav-link"}
         >
           Home
         </Link>
@@ -40,7 +29,7 @@ export class NavBar extends Component {
           smooth={true}
           offset={0}
           duration={600}
-          className={"nav-link" + (this.state.activeLink === "projects" ? " activated" : "")}
+          className={"nav-link"}
         >
           Projects
         </Link>
@@ -50,7 +39,7 @@ export class NavBar extends Component {
           smooth={true}
           offset={0}
           duration={600}
-          className={"nav-link" + (this.state.activeLink === "about" ? " activated" : "")}
+          className={"nav-link"}
         >
           About
         </Link>
