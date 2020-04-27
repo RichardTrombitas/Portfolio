@@ -35,10 +35,9 @@ const About = () => {
   return (
     <div className="about-section" id="about">
       <Typography variant="h5" className={classes.aboutText} align="center">
-        I am currently a computer-science student at Babeş-Bolyai University of Cluj-Napoca. <br/>
-        I am passionate about web programming and I would love to learn more. <br/>
-        Feel free to contact me as I am eager to work with you. <br/> <br/>
-        <>
+        I'm currently a computer-science student at Babeş-Bolyai University of Cluj-Napoca. <br/>
+        I would love to hear from you so feel free to contact me. <br/> <br/>
+        <div id="socialIcons">
             <Typography variant="h5" className={classes.aboutIconsText} align="center">
                 <GitHubIcon className={classes.aboutIcons}/> <br/>
                 GitHub
@@ -55,7 +54,7 @@ const About = () => {
                 <AssignmentIndIcon className={classes.aboutIcons}/> <br/> 
                 Resume
             </Typography>         
-        </>
+        </div>
       </Typography>
       
     </div>
