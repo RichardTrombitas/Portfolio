@@ -93,7 +93,7 @@ const About = () => {
       <Typography variant="h5" className={classes.aboutText} align="center">
         I'm currently a computer-science student at Babeş-Bolyai University of
         Cluj-Napoca. <br />
-        I'm a passionate web developer and would love to learn more. <br />
+        I'm a passionate web developer and always willing to learn more. <br />
         Feel free to contact me, we would make a great team!
         <br /> <br />
         <div id="socialIcons">
