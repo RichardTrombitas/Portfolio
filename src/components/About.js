@@ -36,7 +36,7 @@ const About = () => {
     <div className="about-section" id="about">
       <Typography variant="h5" className={classes.aboutText} align="center">
         I'm currently a computer-science student at Babeş-Bolyai University of Cluj-Napoca. <br/>
-        I would love to hear from you so feel free to contact me. <br/> <br/>
+        Feel free to contact me, we would make a great team!<br/> <br/>
         <div id="socialIcons">
             <Typography variant="h5" className={classes.aboutIconsText} align="center">
                 <GitHubIcon className={classes.aboutIcons}/> <br/>

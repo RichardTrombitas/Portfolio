@@ -4,8 +4,9 @@ import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
+import CardActions from "@material-ui/core/CardActions";
+import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
-import { Modal } from '@material-ui/core';
 
 const useStyles = makeStyles({
   root: {
@@ -14,6 +15,12 @@ const useStyles = makeStyles({
     color: "white",
     margin: "3vh",
   },
+  content: {
+    height: 80
+  },
+  buttons: {
+    //textShadow: "0px 2px 8px black"
+  },
   media: {
     height: 140,
   },
@@ -21,12 +28,15 @@ const useStyles = makeStyles({
 
 export default function MediaCard(props) {
   const classes = useStyles();
+  const openLink = (link) => {
+    window.open(link, '_blank');
+  }
 
   return (
     <Card className={classes.root}>
-      <CardActionArea>
+      <CardActionArea onClick={() => {openLink(props.liveLink)}}>
         <CardMedia className={classes.media} image={props.image} />
-        <CardContent>
+        <CardContent className={classes.content}>
           <Typography gutterBottom variant="h5" component="h2">
             {props.title}
           </Typography>
@@ -35,6 +45,14 @@ export default function MediaCard(props) {
           </Typography>
         </CardContent>
       </CardActionArea>
+      <CardActions>
+        <Button color="secondary" className={classes.buttons} onClick={() => {openLink(props.githubLink)}}>
+          See on GitHub
+        </Button>
+        <Button color="secondary" className={classes.buttons} onClick={() => {openLink(props.liveLink)}}>
+          Live version
+        </Button>
+      </CardActions>
     </Card>
   );
 }
