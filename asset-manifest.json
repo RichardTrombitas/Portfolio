@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.bc99a862.chunk.css",
-    "main.js": "/Portfolio/static/js/main.ccf29c05.chunk.js",
-    "main.js.map": "/Portfolio/static/js/main.ccf29c05.chunk.js.map",
+    "main.css": "/Portfolio/static/css/main.cda11308.chunk.css",
+    "main.js": "/Portfolio/static/js/main.8fecef91.chunk.js",
+    "main.js.map": "/Portfolio/static/js/main.8fecef91.chunk.js.map",
     "runtime-main.js": "/Portfolio/static/js/runtime-main.e029fae7.js",
     "runtime-main.js.map": "/Portfolio/static/js/runtime-main.e029fae7.js.map",
-    "static/js/2.8990306c.chunk.js": "/Portfolio/static/js/2.8990306c.chunk.js",
-    "static/js/2.8990306c.chunk.js.map": "/Portfolio/static/js/2.8990306c.chunk.js.map",
+    "static/js/2.6fc2dd10.chunk.js": "/Portfolio/static/js/2.6fc2dd10.chunk.js",
+    "static/js/2.6fc2dd10.chunk.js.map": "/Portfolio/static/js/2.6fc2dd10.chunk.js.map",
     "index.html": "/Portfolio/index.html",
-    "precache-manifest.2cdb2298cf512828f79f067b7ae31589.js": "/Portfolio/precache-manifest.2cdb2298cf512828f79f067b7ae31589.js",
+    "precache-manifest.18b3fab4c2c88e1c544d7952e7e47acf.js": "/Portfolio/precache-manifest.18b3fab4c2c88e1c544d7952e7e47acf.js",
     "service-worker.js": "/Portfolio/service-worker.js",
-    "static/css/main.bc99a862.chunk.css.map": "/Portfolio/static/css/main.bc99a862.chunk.css.map",
-    "static/js/2.8990306c.chunk.js.LICENSE.txt": "/Portfolio/static/js/2.8990306c.chunk.js.LICENSE.txt",
-    "static/media/Resume.pdf": "/Portfolio/static/media/Resume.05d64221.pdf",
+    "static/css/main.cda11308.chunk.css.map": "/Portfolio/static/css/main.cda11308.chunk.css.map",
+    "static/js/2.6fc2dd10.chunk.js.LICENSE.txt": "/Portfolio/static/js/2.6fc2dd10.chunk.js.LICENSE.txt",
+    "static/media/Resume.pdf": "/Portfolio/static/media/Resume.f378ef88.pdf",
     "static/media/calc.png": "/Portfolio/static/media/calc.8e563571.png",
     "static/media/logo.png": "/Portfolio/static/media/logo.a23e575e.png",
     "static/media/msnLogo.png": "/Portfolio/static/media/msnLogo.e1fc2715.png",
@@ -20,8 +20,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.e029fae7.js",
-    "static/js/2.8990306c.chunk.js",
-    "static/css/main.bc99a862.chunk.css",
-    "static/js/main.ccf29c05.chunk.js"
+    "static/js/2.6fc2dd10.chunk.js",
+    "static/css/main.cda11308.chunk.css",
+    "static/js/main.8fecef91.chunk.js"
   ]
 }
