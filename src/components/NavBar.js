@@ -17,7 +17,7 @@ export class NavBar extends Component {
           to="home"
           spy={true}
           smooth={true}
-          offset={0}
+          offset={-75}
           duration={600}
           className={"nav-link"}
         >
@@ -27,7 +27,7 @@ export class NavBar extends Component {
           to="projects"
           spy={true}
           smooth={true}
-          offset={0}
+          offset={-75}
           duration={600}
           className={"nav-link"}
         >
@@ -37,7 +37,7 @@ export class NavBar extends Component {
           to="about"
           spy={true}
           smooth={true}
-          offset={0}
+          offset={-75}
           duration={600}
           className={"nav-link"}
         >
