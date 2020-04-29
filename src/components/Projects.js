@@ -12,8 +12,8 @@ const useStyles = makeStyles({
     //backgroundColor: "blue",
     top: "25%",
     left: "50%",
-    marginLeft: "-37.65rem",
-    width: "75.3rem",
+    marginLeft: "-40vw",
+    width: "80vw",
   }
 });
 
@@ -22,7 +22,7 @@ const Projects = () => {
 
     return (
         <div className="projects-section" id="projects">
-          <Grid container className={classes.projectsContainer}>
+          <Grid container className={classes.projectsContainer} justify="center">
             <ProjectCard
               image={tictactoe}
               title="Tic-Tac-Toe"
