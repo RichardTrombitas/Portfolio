@@ -34,7 +34,7 @@ export default function ProjectCard(props) {
   };
 
   const handleMouseDown = (e, link) => {
-    if (e.button == 0 || e.button == 1) {
+    if (e.button === 0 || e.button === 1) {
       openLink(link);
     }
   };
