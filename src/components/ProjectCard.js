@@ -26,7 +26,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function MediaCard(props) {
+export default function ProjectCard(props) {
   const classes = useStyles();
   const openLink = (link) => {
     window.open(link, '_blank');
