@@ -14,6 +14,7 @@ const useStyles = makeStyles({
     left: "50%",
     marginLeft: "-40vw",
     width: "80vw",
+    padding: "30vh 0 40vh"
   }
 });
 

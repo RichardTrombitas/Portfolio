@@ -21,8 +21,8 @@
 }
 
 .projects-section {
-  position: relative;
-  height: 100vh;
+  /*position: relative;*/
+  height: 100%;
   /*padding: 15% 10% 15% 10%;*/
   /*background-color: red;*/
 }

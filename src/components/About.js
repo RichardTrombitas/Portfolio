@@ -10,6 +10,7 @@ import Fade from "@material-ui/core/Fade";
 import Paper from "@material-ui/core/Paper";
 import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 import Resume from "../Resume.pdf";
+import { Grid } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   aboutText: {
@@ -17,9 +18,9 @@ const useStyles = makeStyles((theme) => ({
     position: "relative",
     //backgroundColor: "red",
     top: "30%",
-    left: "50%",
-    marginLeft: "-37.65rem",
-    width: "75.3rem",
+    //left: "50%",
+    //marginLeft: "-37.65rem",
+    width: "100%",
   },
 
   aboutIcons: {
@@ -31,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
   aboutIconsWr: {
     display: "inline-block",
     color: "white",
-    padding: "0 3% 0",
+    padding: "0 2% 2% 2%"
   },
 
   aboutIconsText: {
@@ -97,12 +98,12 @@ const About = () => {
         )}
       </Popper>
       <Typography variant="h5" className={classes.aboutText} align="center">
-        I'm currently a computer-science student at Babeş-Bolyai University of
+        I'm currently a computer science student at Babeş-Bolyai University of
         Cluj-Napoca. <br />
         I'm passionate about web development and always willing to learn more. <br />
         Feel free to contact me, we would make a great team!
         <br /> <br />
-        <div id="socialIcons">
+        <Grid>
           <Typography
             variant="h5"
             className={classes.aboutIconsWr}
@@ -171,7 +172,7 @@ const About = () => {
               Resume
             </span>
           </Typography>
-        </div>
+        </Grid>
       </Typography>
     </div>
   );
