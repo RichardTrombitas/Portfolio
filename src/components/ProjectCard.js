@@ -16,7 +16,7 @@ const useStyles = makeStyles({
     margin: "3vh",
   },
   content: {
-    height: 80
+    height: 80,
   },
   buttons: {
     //textShadow: "0px 2px 8px black"
@@ -28,13 +28,20 @@ const useStyles = makeStyles({
 
 export default function ProjectCard(props) {
   const classes = useStyles();
+
   const openLink = (link) => {
-    window.open(link, '_blank');
-  }
+    window.open(link, "_blank");
+  };
+
+  const handleMouseDown = (e, link) => {
+    if (e.button == 0 || e.button == 1) {
+      openLink(link);
+    }
+  };
 
   return (
     <Card className={classes.root}>
-      <CardActionArea onClick={() => {openLink(props.liveLink)}}>
+      <CardActionArea onMouseDown={(e) => handleMouseDown(e, props.liveLink)}>
         <CardMedia className={classes.media} image={props.image} />
         <CardContent className={classes.content}>
           <Typography gutterBottom variant="h5" component="h2">
@@ -46,10 +53,18 @@ export default function ProjectCard(props) {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button color="secondary" className={classes.buttons} onClick={() => {openLink(props.githubLink)}}>
+        <Button
+          color="secondary"
+          className={classes.buttons}
+          onMouseDown={(e) => handleMouseDown(e, props.githubLink)}
+        >
           See on GitHub
         </Button>
-        <Button color="secondary" className={classes.buttons} onClick={() => {openLink(props.liveLink)}}>
+        <Button
+          color="secondary"
+          className={classes.buttons}
+          onMouseDown={(e) => handleMouseDown(e, props.liveLink)}
+        >
           Live version
         </Button>
       </CardActions>

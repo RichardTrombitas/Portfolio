@@ -68,6 +68,12 @@ const About = () => {
     setOpen(false);
   };
 
+  const handleMouseDown = (e, link) => {
+    if (e.button == 0 || e.button == 1) {
+      openLink(link);
+    }
+  };
+
   const githubLink = "https://github.com/RichardTrombitas";
   const linkedinLink =
     "https://www.linkedin.com/in/richard-alexandru-trombitas/";
@@ -104,16 +110,12 @@ const About = () => {
           >
             <GitHubIcon
               className={classes.aboutIcons}
-              onClick={() => {
-                openLink(githubLink);
-              }}
+              onMouseDown={(e) => handleMouseDown(e, githubLink)}
             />{" "}
             <br />
             <span
               className={classes.aboutIconsText}
-              onClick={() => {
-                openLink(githubLink);
-              }}
+              onMouseDown={(e) => handleMouseDown(e, githubLink)}
             >
               GitHub
             </span>
@@ -125,16 +127,12 @@ const About = () => {
           >
             <LinkedInIcon
               className={classes.aboutIcons}
-              onClick={() => {
-                openLink(linkedinLink);
-              }}
+              onMouseDown={(e) => handleMouseDown(e, linkedinLink)}
             />{" "}
             <br />
             <span
               className={classes.aboutIconsText}
-              onClick={() => {
-                openLink(linkedinLink);
-              }}
+              onMouseDown={(e) => handleMouseDown(e, linkedinLink)}
             >
               LinkedIn
             </span>
@@ -163,16 +161,12 @@ const About = () => {
           >
             <AssignmentIndIcon
               className={classes.aboutIcons}
-              onClick={() => {
-                openLink(Resume);
-              }}
+              onMouseDown={(e) => handleMouseDown(e, Resume)}
             />{" "}
             <br />
             <span
               className={classes.aboutIconsText}
-              onClick={() => {
-                openLink(Resume);
-              }}
+              onMouseDown={(e) => handleMouseDown(e, Resume)}
             >
               Resume
             </span>
