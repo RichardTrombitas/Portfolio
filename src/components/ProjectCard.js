@@ -7,8 +7,22 @@ import CardMedia from "@material-ui/core/CardMedia";
 import CardActions from "@material-ui/core/CardActions";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
+import Modal from "@material-ui/core/Modal";
+import Backdrop from "@material-ui/core/Backdrop";
+import Fade from "@material-ui/core/Fade";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
+  modal: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  paper: {
+    backgroundColor: theme.palette.background.paper,
+    border: "2px solid #000",
+    boxShadow: theme.shadows[5],
+    padding: theme.spacing(2, 4, 3),
+  },
   root: {
     maxWidth: 345,
     backgroundColor: "#424242",
@@ -23,51 +37,87 @@ const useStyles = makeStyles({
   },
   media: {
     height: 140,
-  },
-});
+  }
+}));
 
 export default function ProjectCard(props) {
   const classes = useStyles();
+  const [openVideo, setOpenVideo] = React.useState(false);
 
   const openLink = (link) => {
     window.open(link, "_blank");
   };
 
   const handleMouseDown = (e, link) => {
-    if (e.button === 0 || e.button === 1) {
-      openLink(link);
+    if (link !== undefined) {
+      if (e.button === 0 || e.button === 1) {
+        openLink(link);
+      }
+    } else if (props.video !== undefined) {
+      handleOpenVideo();
     }
   };
 
+  const handleOpenVideo = () => {
+    setOpenVideo(true);
+  };
+
+  const handleCloseVideo = () => {
+    setOpenVideo(false);
+  };
+
   return (
-    <Card className={classes.root}>
-      <CardActionArea onMouseDown={(e) => handleMouseDown(e, props.liveLink)}>
-        <CardMedia className={classes.media} image={props.image} />
-        <CardContent className={classes.content}>
-          <Typography gutterBottom variant="h5" component="h2">
-            {props.title}
-          </Typography>
-          <Typography variant="body2" component="p">
-            {props.description}
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      <CardActions>
-        <Button
-          color="secondary"
-          className={classes.buttons}
-          onMouseDown={(e) => handleMouseDown(e, props.githubLink)}
-        >
-          See on GitHub
-        </Button>
-        <Button
-          color="secondary"
-          className={classes.buttons}
-          onMouseDown={(e) => handleMouseDown(e, props.liveLink)}
-        >
-          Live version
-        </Button>
-      </CardActions>
-    </Card>
+    <>
+      <Modal
+        aria-labelledby="transition-modal-title"
+        aria-describedby="transition-modal-description"
+        className={classes.modal}
+        open={openVideo}
+        onClose={handleCloseVideo}
+        closeAfterTransition
+        BackdropComponent={Backdrop}
+        BackdropProps={{
+          timeout: 800,
+        }}
+      >
+        <Fade in={openVideo}>
+          <video
+            src={props.video}
+            controls
+            autoPlay
+            width="70%"
+          ></video>
+        </Fade>
+      </Modal>
+      <Card className={classes.root}>
+        <CardActionArea onMouseDown={(e) => handleMouseDown(e, props.liveLink)}>
+          <CardMedia className={classes.media} image={props.image} />
+          <CardContent className={classes.content}>
+            <Typography gutterBottom variant="h5" component="h2">
+              {props.title}
+            </Typography>
+            <Typography variant="body2" component="p">
+              {props.description}
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+        <CardActions>
+          <Button
+            color="secondary"
+            className={classes.buttons}
+            onMouseDown={(e) => handleMouseDown(e, props.githubLink)}
+          >
+            See on GitHub
+          </Button>
+          <Button
+            color="secondary"
+            className={classes.buttons}
+            onMouseDown={(e) => handleMouseDown(e, props.liveLink)}
+          >
+            {props.liveLink !== undefined ? "Live version" : "Play video"}
+          </Button>
+        </CardActions>
+      </Card>
+    </>
   );
 }

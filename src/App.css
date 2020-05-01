@@ -29,7 +29,7 @@
 
 .about-section {
   position: relative;
-  height: 100vh;
+  height: 101vh;
   /*background-color: blue;*/
   /*padding: 15% 10% 15% 10%;*/
 }
@@ -57,7 +57,7 @@
   transition: all 550ms;
 }
 
-.navbar > .active {
+.navbar > .activeNavLink {
   color: tomato;
   transition: all 550ms;
   font-size: 2.5rem; 
