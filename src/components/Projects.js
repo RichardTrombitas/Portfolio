@@ -6,7 +6,7 @@ import tictactoe from "../images/tictactoe.png";
 import calc from "../images/calc.png";
 import msn from "../images/msnLogo.png";
 import java from "../images/javaLogo.png";
-import TLIDemo from "../videos/TLIDemo.mkv";
+import TLIDemo from "../videos/TLIDemo.mp4";
 
 const useStyles = makeStyles({
   projectsContainer: {
