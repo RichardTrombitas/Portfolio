@@ -9,7 +9,7 @@ import Popper from "@material-ui/core/Popper";
 import Fade from "@material-ui/core/Fade";
 import Paper from "@material-ui/core/Paper";
 import ClickAwayListener from "@material-ui/core/ClickAwayListener";
-import Resume from "../Resume.pdf";
+import CV from "../CV.pdf";
 import { Grid } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
@@ -162,14 +162,14 @@ const About = () => {
           >
             <AssignmentIndIcon
               className={classes.aboutIcons}
-              onMouseDown={(e) => handleMouseDown(e, Resume)}
+              onMouseDown={(e) => handleMouseDown(e, CV)}
             />{" "}
             <br />
             <span
               className={classes.aboutIconsText}
-              onMouseDown={(e) => handleMouseDown(e, Resume)}
+              onMouseDown={(e) => handleMouseDown(e, CV)}
             >
-              Resume
+              CV
             </span>
           </Typography>
         </Grid>
