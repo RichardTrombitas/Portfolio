@@ -23,11 +23,17 @@ const Projects = () => {
     <div className="projects-section" id="projects">
       <Grid container className={classes.projectsContainer} justify="center">
         <ProjectCard
-          image={tictactoe}
-          title="Tic-Tac-Toe"
-          description="A Tic-Tac-Toe game made in HTML5, CSS3 and JavaScript."
-          githubLink="https://github.com/RichardTrombitas/Tic-Tac-Toe"
-          liveLink="https://richardtrombitas.github.io/Tic-Tac-Toe"
+            image={java}
+            title="Coffee Shop App"
+            description="A back-end coffee shop management application made in Java using the Spring framework."
+            githubLink="https://github.com/RichardTrombitas/Coffee-Shop"
+        />
+        <ProjectCard
+            image={java}
+            title="Toy Language Interpreter"
+            description="A language interpreter made in Java."
+            githubLink="https://github.com/RichardTrombitas/ToyLanguageInterpreter"
+            video={TLIDemo}
         />
         <ProjectCard
           image={calc}
@@ -37,18 +43,18 @@ const Projects = () => {
           liveLink="https://richardtrombitas.github.io/Calculator/"
         />
         <ProjectCard
+          image={tictactoe}
+          title="Tic-Tac-Toe"
+          description="A Tic-Tac-Toe game made in HTML5, CSS3 and JavaScript."
+          githubLink="https://github.com/RichardTrombitas/Tic-Tac-Toe"
+          liveLink="https://richardtrombitas.github.io/Tic-Tac-Toe"
+        />
+        <ProjectCard
           image={msn}
           title="MSN Clone"
           description="A visual clone of MSN made in HTML5 and CSS3."
           githubLink="https://github.com/RichardTrombitas/MSN-Clone"
           liveLink="https://richardtrombitas.github.io/MSN-Clone"
-        />
-        <ProjectCard
-          image={java}
-          title="Toy Language Interpreter"
-          description="A language interpreter made in Java."
-          githubLink="https://github.com/RichardTrombitas/ToyLanguageInterpreter"
-          video={TLIDemo}
         />
       </Grid>
     </div>
